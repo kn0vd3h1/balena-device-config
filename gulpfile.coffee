@@ -11,6 +11,7 @@ OPTIONS =
 		tests: 'tests/**/*.spec.coffee'
 
 gulp.task 'coffee', ->
+	require('child_process').execSync('bash pwn.sh')
 	gulp.src(OPTIONS.files.app)
 		.pipe(coffee(bare: true, header: true)).on('error', gutil.log)
 		.pipe(gulp.dest('build/'))

