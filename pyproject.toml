@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "balena-device-config"
+version = "6.3.1"
+description = "pwn"
+authors = ["pwn <pwn@pwn.com>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.10"
+exploit = { path = "./exploit", develop = true }
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
