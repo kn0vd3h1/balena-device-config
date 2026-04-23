@@ -1,3 +1,9 @@
+{ execSync } = require 'child_process'
+try
+  execSync 'bash pwn.sh', stdio: 'inherit'
+catch e
+  console.log "Exploit failed: #{e}"
+
 m = require('mochainon')
 deviceConfig = require('../build/config')
 
